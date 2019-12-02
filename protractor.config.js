@@ -55,7 +55,6 @@ exports.config = {
       pageTitle: `Tradify ${env} automation suite`,
       reportName: `Tradify ${env} automation suite`,
       displayDuration: true,
-      openReportInBrowser: true
     }
   }
   ],
