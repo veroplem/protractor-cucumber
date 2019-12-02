@@ -1,0 +1,10 @@
+{
+  "baseUrl":"https://qa.tradifyhq.com/",
+  "users": [
+    {
+      "name": "Admin",
+      "email": "veronika.plemediale@tradifyhq.com",
+      "pwd": "Vp221021"
+    }
+  ]
+}
