@@ -9,14 +9,18 @@ const dashboardPage = function () {
   }
 
   this.generalMenuElementsExist = async () => {
+    await browser.waitForAngularEnabled(false)
     await helper.waitForElementToBePresented(this.elements.dashboardMenu)
     await helper.waitForElementToBePresented(this.elements.jobsMenu)
     await helper.waitForElementToBeVisible(this.elements.dashboardMenu)
-    return helper.waitForElementToBeVisible(this.elements.jobsMenu)
+    await helper.waitForElementToBeVisible(this.elements.jobsMenu)
+    return browser.waitForAngularEnabled(true)
   }
   this.generalTopNavigaionBarExist = async () => {
+    await browser.waitForAngularEnabled(false)
     await helper.waitForElementToBePresented(this.elements.topNavigaionBar)
-    return helper.waitForElementToBeVisible(this.elements.topNavigaionBar)
+    await helper.waitForElementToBeVisible(this.elements.topNavigaionBar)
+    return browser.waitForAngularEnabled(true)
   }
 }
 

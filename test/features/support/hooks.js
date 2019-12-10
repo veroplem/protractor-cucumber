@@ -10,7 +10,7 @@ BeforeAll(async function () {
 // add before scenario hook
 Before(async function (scenario) {
   // Write here what you want to do before each scenario
-  await browser.waitForAngularEnabled(false)
+  await browser.waitForAngularEnabled(true)
   await browser.driver.manage().window().maximize()
   await browser.driver.manage().deleteAllCookies()
 })
