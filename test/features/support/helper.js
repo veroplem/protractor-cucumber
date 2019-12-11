@@ -5,9 +5,9 @@ const dragAndDrop = require('html-dnd').code
 const helper = function () {
   this.openPage = async (url) => browser.driver.get(url)
   this.getPageTitle = async () => browser.driver.getTitle()
-  this.waitForElementToBePresented = async (elementLocator, timeout = 10000) => browser.wait(EC.presenceOf(elementLocator), timeout)
-  this.waitForElementToBeVisible = async (elementLocator, timeout = 10000) => browser.wait(EC.visibilityOf(elementLocator), timeout)
-  this.waitForElementToDisapear = async (elementLocator, timeout = 10000) => {
+  this.waitForElementToBePresented = async (elementLocator, timeout = 30000) => browser.wait(EC.presenceOf(elementLocator), timeout)
+  this.waitForElementToBeVisible = async (elementLocator, timeout = 30000) => browser.wait(EC.visibilityOf(elementLocator), timeout)
+  this.waitForElementToDisapear = async (elementLocator, timeout = 30000) => {
     return browser.wait(EC.invisibilityOf(elementLocator), timeout)
   }
   this.inputText = async (elementLocator, text, timeout = 5000) => {

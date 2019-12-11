@@ -3,8 +3,8 @@ const helper = require('../support/helper')
 
 const loginPage = function () {
   this.elements = {
-    logInEmail: element(by.css('input[ng-model="vm.userName"]')),
-    logInPassword: element(by.css('input[ng-model ="vm.password"]')),
+    logInEmail: element(by.model('vm.userName')),
+    logInPassword: element(by.model('vm.password')),
     logInSubmitBtn: element(by.id('login'))
   }
 

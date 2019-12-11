@@ -4,7 +4,7 @@ const env = require('./env').environment
 exports.config = {
 
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  getPageTimeout: 60000,
+  getPageTimeout: 100000,
   allScriptsTimeout: 300000,
   SELENIUM_PROMISE_MANAGER: false,
   baseUrl: config.baseUrl,

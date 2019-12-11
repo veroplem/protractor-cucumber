@@ -1,5 +1,5 @@
 const environment = process.env.ENVIRONMENT || 'qa'
-const config = require(`./test/features/data/${environment}/config`)
+const config = require(`./test/features/test_data/${environment}/config`)
 
 module.exports = {
   config,

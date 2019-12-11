@@ -5,7 +5,7 @@ const featureDir = path.join(__dirname, '../../')
 
 // add a before all feature hook
 BeforeAll(async function () {
-  await setDefaultTimeout(60 * 1000)
+  await setDefaultTimeout(10 * 10000)
 })
 // add before scenario hook
 Before(async function (scenario) {
