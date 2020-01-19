@@ -10,7 +10,7 @@ const dashboardPage = function () {
   }
 
   this.generalMenuElementsExist = async () => {
-    //on the Dashboard page disable webdriver to wait until Angular finished rendering the page and has no outstanding http requests 
+    //Disable waiting for Angular to finish rendering the Dashboard page and complete all http requests as it has an intercom request which stays open
     await browser.waitForAngularEnabled(false)
     await helper.waitForElementToBePresented(this.elements.dashboardMenu)
     await helper.waitForElementToBePresented(this.elements.jobsMenu)

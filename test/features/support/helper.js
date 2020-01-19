@@ -1,4 +1,5 @@
 const { browser, protractor, by } = require('protractor')
+const protractorHelper = require('protractor-helper')
 const EC = protractor.ExpectedConditions
 const dragAndDrop = require('html-dnd').code
 
@@ -8,7 +9,9 @@ const helper = function () {
   this.waitForElementToBePresented = async (elementLocator, timeout = 30000) => browser.wait(EC.presenceOf(elementLocator), timeout)
   this.waitForElementToBeVisible = async (elementLocator, timeout = 30000) => browser.wait(EC.visibilityOf(elementLocator), timeout)
   this.waitForElementToDisapear = async (elementLocator, timeout = 30000) => {
-    return browser.wait(EC.invisibilityOf(elementLocator), timeout)
+    //Try to use Protractor Helper vs Expected Conditions
+    protractorHelper.waitForElementVisibility(elementLocator, timeout)
+    //return browser.wait(EC.invisibilityOf(elementLocator), timeout)
   }
   this.inputText = async (elementLocator, text, timeout = 5000) => {
     await browser.wait(EC.presenceOf(elementLocator), timeout)
