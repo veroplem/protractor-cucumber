@@ -23,7 +23,7 @@
     "cucumber": "^5.1.0",
     "features": "^0.1.0",
     "html-dnd": "^1.2.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "multiple-cucumber-html-reporter": "^1.13.1",
     "protractor": "^5.4.2",
     "protractor-cucumber": "^0.1.8",
